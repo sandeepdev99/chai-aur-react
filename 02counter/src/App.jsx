@@ -7,9 +7,15 @@ function App() {
   //let counter = 15;
   const addValue = () =>{
     if(counter < 30){
-    console.log(counter, "value added", Math.random());
-    setCounter(counter + 3); ////counter += 1;
-    console.log(counter + 3 , "value added", Math.random());
+    //console.log(counter, "value added", Math.random());
+    setCounter((prevCounter)=>{
+      return prevCounter + 1; // preCounter is not fixed name, can be any
+    });
+    setCounter(prevCounter => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1); ////counter += 1; setState runs in batches so same work done again and again only does once
+
+    //console.log(counter + 3 , "value added", Math.random());
     }
     
   }
