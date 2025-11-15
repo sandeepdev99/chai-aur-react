@@ -6,5 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),
   tailwindcss()
-  ]
+  ],
+  base: '/chai-aur-react/03props with tailwind/'
 })
